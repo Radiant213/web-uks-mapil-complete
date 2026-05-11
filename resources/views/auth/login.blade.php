@@ -28,8 +28,8 @@
                 <span class="font-bold text-2xl tracking-tight text-slate-800">UKS<span class="text-indigo-600">App</span></span>
             </div>
 
-            <h1 class="text-3xl font-bold text-slate-800 mb-2 tracking-tight login-field-animate">Welcome back!</h1>
-            <p class="text-gray-500 mb-8 text-sm login-field-animate">Please enter your credentials to access the system.</p>
+            <h1 class="text-3xl font-bold text-slate-800 mb-2 tracking-tight login-field-animate">Selamat Datang!</h1>
+            <p class="text-gray-500 mb-8 text-sm login-field-animate">Silahkan masukkan kredensial Anda untuk mengakses sistem.</p>
 
             @if($errors->any())
                 <div class="mb-6 p-4 rounded-xl bg-red-50 border border-red-100 flex items-center gap-3 text-red-700 alert-animate">
@@ -61,13 +61,13 @@
                 <div class="flex items-center justify-between mt-2 login-field-animate">
                     <label class="flex items-center gap-2 cursor-pointer">
                         <input type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
-                        <span class="text-sm text-gray-600 font-medium">Remember me</span>
+                        <span class="text-sm text-gray-600 font-medium">Ingat Saya</span>
                     </label>
-                    <a href="#" class="text-sm font-semibold text-indigo-600 hover:text-indigo-500">Forgot password?</a>
+                    <a href="#" class="text-sm font-semibold text-indigo-600 hover:text-indigo-500">Lupa Password?</a>
                 </div>
 
                 <button type="submit" class="w-full bg-slate-800 hover:bg-slate-900 text-white font-medium py-3 rounded-xl transition-all shadow-lg shadow-slate-200 mt-8 flex justify-center items-center gap-2 btn-animate login-field-animate">
-                    Sign in to account
+                    Masuk Ke Sistem
                     <i data-lucide="arrow-right" class="w-4 h-4"></i>
                 </button>
             </form>
@@ -83,7 +83,7 @@
         <div class="relative z-10 max-w-md">
             <div class="bg-white/10 p-6 rounded-2xl backdrop-blur-sm border border-white/20 mb-8 shadow-2xl animate-scaleIn anim-delay-3">
                 <i data-lucide="activity" class="w-16 h-16 text-white mb-4 mx-auto"></i>
-                <h2 class="text-3xl font-bold text-white mb-4 leading-tight">Manage Your UKS with Ease.</h2>
+                <h2 class="text-3xl font-bold text-white mb-4 leading-tight">UKS Digital</h2>
                 <p class="text-indigo-100 text-sm leading-relaxed">Sistem Informasi Manajemen Unit Kesehatan Sekolah. Mencatat riwayat medis siswa dan mengontrol ketersediaan obat secara otomatis.</p>
             </div>
             

@@ -6,21 +6,23 @@ Aplikasi web untuk mengelola operasional **Unit Kesehatan Sekolah (UKS)** berbas
 
 ## 🛠 Tech Stack
 
-| Teknologi | Versi | Kegunaan |
-|-----------|-------|----------|
-| **Laravel** | 11.x | Backend Framework (MVC) |
-| **Tailwind CSS** | 3.x | Styling & UI Components |
-| **Vite** | 6.x | Asset Bundler |
-| **Chart.js** | 4.x | Grafik Kunjungan Bulanan |
-| **Lucide Icons** | Latest | Icon Library |
-| **MySQL** | 8.x | Database |
+| Teknologi              | Versi  | Kegunaan                 |
+| ---------------------- | ------ | ------------------------ |
+| **Laravel**      | 11.x   | Backend Framework (MVC)  |
+| **Tailwind CSS** | 3.x    | Styling & UI Components  |
+| **Vite**         | 6.x    | Asset Bundler            |
+| **Chart.js**     | 4.x    | Grafik Kunjungan Bulanan |
+| **Lucide Icons** | Latest | Icon Library             |
+| **MySQL**        | 8.x    | Database                 |
 
 ---
 
 ## 🚀 Panduan Instalasi
 
 ### 1. Persiapan Sistem
+
 Pastikan sudah terinstall:
+
 - **PHP** ≥ 8.2
 - **Composer**
 - **Node.js & NPM**
@@ -78,16 +80,17 @@ Buka di browser: 👉 **http://127.0.0.1:8000**
 
 ## 🔐 Akun Login Default
 
-| Role | Email | Password | Hak Akses |
-|------|-------|----------|-----------|
-| **Admin (Pembina)** | `admin@uks.com` | `password` | Akses penuh: CRUD Siswa, Kelas, Obat, Kunjungan |
-| **Petugas (PMR)** | `petugas@uks.com` | `password` | Akses terbatas: Catat Kunjungan & Lihat Stok Obat |
+| Role                      | Email               | Password     | Hak Akses                                         |
+| ------------------------- | ------------------- | ------------ | ------------------------------------------------- |
+| **Admin (Pembina)** | `admin@uks.com`   | `password` | Akses penuh: CRUD Siswa, Kelas, Obat, Kunjungan   |
+| **Petugas (PMR)**   | `petugas@uks.com` | `password` | Akses terbatas: Catat Kunjungan & Lihat Stok Obat |
 
 ---
 
 ## ✨ Fitur Utama
 
 ### 👨‍⚕️ Admin (Pembina UKS)
+
 - ✅ Dashboard statistik (Total Kunjungan, Siswa, Obat + Grafik Bulanan)
 - ✅ CRUD Data Siswa (NIS, Nama, Kelas, Jenis Kelamin, Alamat)
 - ✅ CRUD Data Kelas
@@ -97,6 +100,7 @@ Buka di browser: 👉 **http://127.0.0.1:8000**
 - ✅ Detail rekam medis per kunjungan
 
 ### 👩‍⚕️ Petugas (PMR)
+
 - ✅ Dashboard statistik
 - ✅ Pencatatan Kunjungan UKS + Pemberian Obat
 - ✅ Lihat daftar dan stok obat
@@ -107,27 +111,32 @@ Buka di browser: 👉 **http://127.0.0.1:8000**
 ## 📸 Screenshots
 
 ### Halaman Login
+
 ![Login Page](docs/screenshots/login.png)
 
 ### Dashboard
+
 ![Dashboard](docs/screenshots/dashboard.png)
 
 ### Data Kunjungan UKS
+
 ![Kunjungan Index](docs/screenshots/kunjungan.png)
 
 ### Detail Rekam Medis
+
 ![Detail Kunjungan](docs/screenshots/kunjungan-detail.png)
 
 ### Data Obat & Stok
+
 ![Data Obat](docs/screenshots/obat.png)
 
 ### Data Siswa
+
 ![Data Siswa](docs/screenshots/siswa.png)
 
 ### Data Kelas
-![Data Kelas](docs/screenshots/kelas.png)
 
-> 💡 **Catatan:** Taruh file screenshot ke folder `docs/screenshots/` dengan nama file sesuai di atas.
+![Data Kelas](docs/screenshots/kelas.png)
 
 ---
 
@@ -191,13 +200,13 @@ erDiagram
 
 Setelah menjalankan `php artisan db:seed`, database akan terisi:
 
-| Data | Jumlah | Keterangan |
-|------|--------|------------|
-| **User** | 2 | 1 Admin + 1 Petugas |
-| **Kelas** | 6 | X RPL 1/2, XI RPL 1/2, XII RPL 1/2 |
-| **Siswa** | 20 | Tersebar di 6 kelas |
-| **Obat** | 10 | Paracetamol, Betadine, Antangin, dll |
-| **Kunjungan** | 15 | Jan–Mei 2026 (chart terisi otomatis) |
+| Data                | Jumlah | Keterangan                            |
+| ------------------- | ------ | ------------------------------------- |
+| **User**      | 2      | 1 Admin + 1 Petugas                   |
+| **Kelas**     | 6      | X RPL 1/2, XI RPL 1/2, XII RPL 1/2    |
+| **Siswa**     | 20     | Tersebar di 6 kelas                   |
+| **Obat**      | 10     | Paracetamol, Betadine, Antangin, dll  |
+| **Kunjungan** | 15     | Jan–Mei 2026 (chart terisi otomatis) |
 
 ---
 
