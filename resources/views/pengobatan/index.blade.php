@@ -1,18 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+<div class="mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 animate-fadeInUp">
     <div>
         <h1 class="text-2xl font-bold text-slate-800 tracking-tight">Buku Kunjungan UKS</h1>
         <p class="text-sm text-gray-500 mt-1">Rekam medis dan riwayat kunjungan siswa.</p>
     </div>
-    <a href="{{ route('pengobatan.create') }}" class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-900 text-white px-4 py-2.5 rounded-xl text-sm font-medium transition-colors shadow-sm">
+    <a href="{{ route('pengobatan.create') }}" class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-900 text-white px-4 py-2.5 rounded-xl text-sm font-medium transition-colors shadow-sm btn-animate">
         <i data-lucide="plus" class="w-4 h-4"></i>
         Catat Kunjungan
     </a>
 </div>
 
-<div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+<div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden animate-fadeInUp anim-delay-2">
     <!-- Tabel Container dengan Scroll Horizontal untuk Mobile -->
     <div class="overflow-x-auto">
         <table class="w-full text-left border-collapse">
@@ -28,7 +28,7 @@
             </thead>
             <tbody class="divide-y divide-gray-100 text-sm">
                 @forelse($treatments as $index => $t)
-                <tr class="hover:bg-gray-50/50 transition-colors group">
+                <tr class="hover:bg-gray-50/50 transition-colors group table-row-animate">
                     <td class="px-6 py-4 text-gray-500">{{ $index + 1 }}</td>
                     <td class="px-6 py-4">
                         <div class="flex items-center gap-2">

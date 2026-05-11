@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="mb-6 flex items-center gap-4">
+<div class="mb-6 flex items-center gap-4 animate-fadeInUp">
     <a href="{{ route('kelas.index') }}" class="p-2 text-gray-400 hover:text-slate-800 hover:bg-gray-100 rounded-lg transition-colors">
         <i data-lucide="arrow-left" class="w-5 h-5"></i>
     </a>
@@ -11,7 +11,7 @@
     </div>
 </div>
 
-<div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 max-w-xl">
+<div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 max-w-xl animate-fadeInUp anim-delay-2">
     <form action="{{ route('kelas.store') }}" method="POST" class="space-y-6">
         @csrf
         
@@ -23,7 +23,7 @@
 
         <div class="pt-4 flex justify-end gap-3 border-t border-gray-100">
             <a href="{{ route('kelas.index') }}" class="px-5 py-2.5 text-sm font-medium text-gray-600 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 transition-colors">Batal</a>
-            <button type="submit" class="px-5 py-2.5 text-sm font-medium text-white bg-indigo-600 rounded-xl hover:bg-indigo-700 shadow-sm shadow-indigo-200 transition-colors">Simpan Kelas</button>
+            <button type="submit" class="px-5 py-2.5 text-sm font-medium text-white bg-indigo-600 rounded-xl hover:bg-indigo-700 shadow-sm shadow-indigo-200 transition-colors btn-animate">Simpan Kelas</button>
         </div>
     </form>
 </div>

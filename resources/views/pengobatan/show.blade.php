@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="mb-6 flex items-center gap-4">
+<div class="mb-6 flex items-center gap-4 animate-fadeInUp">
     <a href="{{ route('pengobatan.index') }}" class="p-2 text-gray-400 hover:text-slate-800 hover:bg-gray-100 rounded-lg transition-colors">
         <i data-lucide="arrow-left" class="w-5 h-5"></i>
     </a>
@@ -14,7 +14,7 @@
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
     <!-- Left Column: Patient Details -->
     <div class="md:col-span-2 space-y-6">
-        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden animate-fadeInUp anim-delay-1 card-hover-subtle">
             <div class="p-6 border-b border-gray-100 flex items-center justify-between">
                 <h3 class="text-base font-bold text-slate-800 flex items-center gap-2">
                     <i data-lucide="user" class="w-5 h-5 text-indigo-600"></i> Informasi Pasien
@@ -46,7 +46,7 @@
         </div>
 
         <!-- Medicine List -->
-        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden animate-fadeInUp anim-delay-2 card-hover-subtle">
             <div class="p-6 border-b border-gray-100">
                 <h3 class="text-base font-bold text-slate-800 flex items-center gap-2">
                     <i data-lucide="pill" class="w-5 h-5 text-indigo-600"></i> Resep Obat Diberikan
@@ -55,7 +55,7 @@
             
             <div class="divide-y divide-gray-100">
                 @forelse ($treatment->treatment_details as $detail)
-                <div class="p-4 px-6 flex items-center justify-between hover:bg-gray-50 transition-colors">
+                <div class="p-4 px-6 flex items-center justify-between hover:bg-gray-50 transition-colors table-row-animate">
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600">
                             <i data-lucide="tablets" class="w-5 h-5"></i>
@@ -81,7 +81,7 @@
 
     <!-- Right Column: Meta Info -->
     <div class="space-y-6">
-        <div class="bg-indigo-600 rounded-2xl shadow-sm overflow-hidden text-white p-6 relative">
+        <div class="bg-indigo-600 rounded-2xl shadow-sm overflow-hidden text-white p-6 relative animate-fadeInUp anim-delay-3 card-hover">
             <div class="absolute -right-6 -top-6 w-24 h-24 bg-white/10 rounded-full blur-2xl"></div>
             
             <h3 class="text-indigo-100 text-xs font-semibold uppercase tracking-wider mb-4 relative z-10">Waktu Kunjungan</h3>

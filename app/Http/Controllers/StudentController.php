@@ -15,7 +15,7 @@ class StudentController extends Controller
         // NGAMBIL SEMUA DATA SISWA
         // Kita juga bisa pake Student::with('kelas')->get() kalo mau narik nama kelasnya sekalian (Eager Loading)
         // Biar database-nya ngga ngelakuin proses query berulang-ulang pas nampilin di HTML
-        $students = Student::all();
+        $students = Student::with('kelas')->get();
         
         // BUKA HALAMAN DAFTAR SISWA (View)
         // compact('students') itu cara cepet buat ngirim array/variabel ke dalam file blade
@@ -41,6 +41,7 @@ class StudentController extends Controller
             'nama' => 'required|string|max:255',
             'kelas_id' => 'required|integer', // Ini adalah Foreign Key (Kunci Relasi) yang nyambung ke tabel Kelas
             'jenis_kelamin' => 'required|in:L,P', // Cuma nerima value huruf L atau P (kayak fitur ENUM di database)
+            'alamat' => 'nullable|string',
         ]);
 
         // 2. INSERT KE DATABASE
@@ -78,6 +79,7 @@ class StudentController extends Controller
             'nama' => 'required|string|max:255',
             'kelas_id' => 'required|integer',
             'jenis_kelamin' => 'required|in:L,P',
+            'alamat' => 'nullable|string',
         ]);
 
         // 2. TIMPA DATA LAMA

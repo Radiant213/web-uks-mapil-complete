@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="mb-6 flex items-center gap-4">
+<div class="mb-6 flex items-center gap-4 animate-fadeInUp">
     <a href="{{ route('siswa.index') }}" class="p-2 text-gray-400 hover:text-slate-800 hover:bg-gray-100 rounded-lg transition-colors">
         <i data-lucide="arrow-left" class="w-5 h-5"></i>
     </a>
@@ -11,7 +11,7 @@
     </div>
 </div>
 
-<div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 max-w-3xl">
+<div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 max-w-3xl animate-fadeInUp anim-delay-2">
     <form action="{{ route('siswa.update', $student->id) }}" method="POST" class="space-y-6">
         @csrf
         @method('PUT')
@@ -57,13 +57,13 @@
 
         <div>
             <label class="block text-sm font-medium text-gray-700 mb-1.5">Alamat</label>
-            <textarea name="alamat" required rows="3" placeholder="Alamat rumah..." 
+            <textarea name="alamat" rows="3" placeholder="Alamat rumah (opsional)..." 
                 class="w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all outline-none text-slate-700">{{ $student->alamat }}</textarea>
         </div>
 
         <div class="pt-4 flex justify-end gap-3 border-t border-gray-100">
             <a href="{{ route('siswa.index') }}" class="px-5 py-2.5 text-sm font-medium text-gray-600 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 transition-colors">Batal</a>
-            <button type="submit" class="px-5 py-2.5 text-sm font-medium text-white bg-indigo-600 rounded-xl hover:bg-indigo-700 shadow-sm shadow-indigo-200 transition-colors">Update Data</button>
+            <button type="submit" class="px-5 py-2.5 text-sm font-medium text-white bg-indigo-600 rounded-xl hover:bg-indigo-700 shadow-sm shadow-indigo-200 transition-colors btn-animate">Update Data</button>
         </div>
     </form>
 </div>

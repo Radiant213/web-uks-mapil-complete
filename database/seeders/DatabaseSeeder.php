@@ -13,9 +13,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // Manggil seeder khusus yang tadi kita bikin
+        // Manggil semua seeder dalam urutan yang benar (dependensi dulu)
         $this->call([
-            UserSeeder::class,
+            UserSeeder::class,      // Akun Admin & Petugas
+            KelasSeeder::class,     // Master Kelas (6 kelas)
+            StudentSeeder::class,   // Data Siswa (20 siswa, butuh Kelas)
+            MedicineSeeder::class,  // Master Obat (10 obat)
+            TreatmentSeeder::class, // Kunjungan UKS (15 data, butuh Siswa + Obat)
         ]);
     }
 }

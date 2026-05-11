@@ -29,10 +29,10 @@
 <body class="text-slate-800 antialiased flex h-screen overflow-hidden">
 
     <!-- SIDEBAR -->
-    <aside class="w-64 bg-white border-r border-gray-200 flex flex-col justify-between hidden md:flex z-10 shadow-sm">
+    <aside class="w-64 bg-white border-r border-gray-200 flex flex-col justify-between hidden md:flex z-10 shadow-sm animate-slideInLeft">
         <div>
             <!-- Logo -->
-            <div class="h-20 flex items-center px-8 border-b border-gray-100">
+            <div class="h-20 flex items-center px-8 border-b border-gray-100 animate-fadeIn">
                 <div class="flex items-center gap-3">
                     <div class="w-8 h-8 rounded-full bg-indigo-600 flex items-center justify-center text-white font-bold text-lg">
                         <i data-lucide="cross"></i>
@@ -43,32 +43,32 @@
 
             <!-- Navigation Links -->
             <nav class="p-4 space-y-1 mt-4">
-                <p class="px-4 text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Menu Utama</p>
+                <p class="px-4 text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2 nav-item-animate">Menu Utama</p>
                 
-                <a href="{{ url('/') }}" class="flex items-center gap-3 px-4 py-3 rounded-xl {{ request()->is('/') ? 'bg-indigo-50 text-indigo-700 font-semibold' : 'text-slate-500 hover:bg-gray-50 hover:text-slate-900 transition-colors' }}">
+                <a href="{{ url('/') }}" class="nav-item-animate flex items-center gap-3 px-4 py-3 rounded-xl {{ request()->is('/') ? 'bg-indigo-50 text-indigo-700 font-semibold' : 'text-slate-500 hover:bg-gray-50 hover:text-slate-900 transition-colors' }}">
                     <i data-lucide="layout-dashboard" class="w-5 h-5 {{ request()->is('/') ? 'text-indigo-600' : '' }}"></i>
                     Dashboard
                 </a>
 
-                <a href="{{ route('pengobatan.index') }}" class="flex items-center gap-3 px-4 py-3 rounded-xl {{ request()->is('pengobatan*') ? 'bg-indigo-50 text-indigo-700 font-semibold' : 'text-slate-500 hover:bg-gray-50 hover:text-slate-900 transition-colors' }}">
+                <a href="{{ route('pengobatan.index') }}" class="nav-item-animate flex items-center gap-3 px-4 py-3 rounded-xl {{ request()->is('pengobatan*') ? 'bg-indigo-50 text-indigo-700 font-semibold' : 'text-slate-500 hover:bg-gray-50 hover:text-slate-900 transition-colors' }}">
                     <i data-lucide="activity" class="w-5 h-5 {{ request()->is('pengobatan*') ? 'text-indigo-600' : '' }}"></i>
                     Kunjungan
                 </a>
 
-                <a href="{{ route('obat.index') }}" class="flex items-center gap-3 px-4 py-3 rounded-xl {{ request()->is('obat*') ? 'bg-indigo-50 text-indigo-700 font-semibold' : 'text-slate-500 hover:bg-gray-50 hover:text-slate-900 transition-colors' }}">
+                <a href="{{ route('obat.index') }}" class="nav-item-animate flex items-center gap-3 px-4 py-3 rounded-xl {{ request()->is('obat*') ? 'bg-indigo-50 text-indigo-700 font-semibold' : 'text-slate-500 hover:bg-gray-50 hover:text-slate-900 transition-colors' }}">
                     <i data-lucide="pill" class="w-5 h-5 {{ request()->is('obat*') ? 'text-indigo-600' : '' }}"></i>
                     Obat & Stok
                 </a>
 
                 @if(auth()->user()->role === 'admin')
-                    <p class="px-4 text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2 mt-6">Master Data</p>
+                    <p class="px-4 text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2 mt-6 nav-item-animate">Master Data</p>
                     
-                    <a href="{{ route('siswa.index') }}" class="flex items-center gap-3 px-4 py-3 rounded-xl {{ request()->is('siswa*') ? 'bg-indigo-50 text-indigo-700 font-semibold' : 'text-slate-500 hover:bg-gray-50 hover:text-slate-900 transition-colors' }}">
+                    <a href="{{ route('siswa.index') }}" class="nav-item-animate flex items-center gap-3 px-4 py-3 rounded-xl {{ request()->is('siswa*') ? 'bg-indigo-50 text-indigo-700 font-semibold' : 'text-slate-500 hover:bg-gray-50 hover:text-slate-900 transition-colors' }}">
                         <i class="w-5 h-5 {{ request()->is('siswa*') ? 'text-indigo-600' : '' }}" data-lucide="users"></i>
                         Siswa
                     </a>
 
-                    <a href="{{ route('kelas.index') }}" class="flex items-center gap-3 px-4 py-3 rounded-xl {{ request()->is('kelas*') ? 'bg-indigo-50 text-indigo-700 font-semibold' : 'text-slate-500 hover:bg-gray-50 hover:text-slate-900 transition-colors' }}">
+                    <a href="{{ route('kelas.index') }}" class="nav-item-animate flex items-center gap-3 px-4 py-3 rounded-xl {{ request()->is('kelas*') ? 'bg-indigo-50 text-indigo-700 font-semibold' : 'text-slate-500 hover:bg-gray-50 hover:text-slate-900 transition-colors' }}">
                         <i class="w-5 h-5 {{ request()->is('kelas*') ? 'text-indigo-600' : '' }}" data-lucide="school"></i>
                         Kelas
                     </a>
@@ -92,7 +92,7 @@
     <div class="flex-1 flex flex-col h-screen overflow-hidden bg-[#f8fafc]">
         
         <!-- HEADER -->
-        <header class="h-20 bg-white border-b border-gray-100 flex items-center justify-between px-8 z-10">
+        <header class="h-20 bg-white border-b border-gray-100 flex items-center justify-between px-8 z-10 animate-fadeInDown">
             <!-- Search Bar Dummy -->
             <div class="flex-1 max-w-md">
                 <div class="relative">
@@ -128,14 +128,14 @@
         <main class="flex-1 overflow-x-hidden overflow-y-auto bg-[#f8fafc] p-8">
             <!-- Notifikasi Session -->
             @if(session('success'))
-                <div class="mb-6 p-4 rounded-xl bg-green-50 border border-green-100 flex items-center gap-3 text-green-700 shadow-sm">
+                <div class="mb-6 p-4 rounded-xl bg-green-50 border border-green-100 flex items-center gap-3 text-green-700 shadow-sm alert-animate">
                     <i data-lucide="check-circle-2" class="w-5 h-5 text-green-500"></i>
                     <p class="font-medium text-sm">{{ session('success') }}</p>
                 </div>
             @endif
 
             @if(session('error') || $errors->any())
-                <div class="mb-6 p-4 rounded-xl bg-red-50 border border-red-100 flex items-center gap-3 text-red-700 shadow-sm">
+                <div class="mb-6 p-4 rounded-xl bg-red-50 border border-red-100 flex items-center gap-3 text-red-700 shadow-sm alert-animate">
                     <i data-lucide="alert-circle" class="w-5 h-5 text-red-500"></i>
                     <p class="font-medium text-sm">
                         {{ session('error') ?? $errors->first() }}
@@ -143,7 +143,9 @@
                 </div>
             @endif
 
-            @yield('content')
+            <div class="page-content-animate">
+                @yield('content')
+            </div>
         </main>
     </div>
 
